@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRiSM: Light Seeker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOURPUBLISHERID" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="game-container">
+        <div id="loading-screen">
+            <div class="loader"></div>
+            <p>Loading PRiSM: Light Seeker...</p>
+        </div>
+        
+        <div id="menu-screen" class="hidden">
+            <h1>PRiSM: Light Seeker</h1>
+            <button id="start-game">Start Game</button>
+            <button id="how-to-play">How to Play</button>
+        </div>
+        
+        <div id="how-to-play-screen" class="hidden">
+            <h2>How to Play</h2>
+            <p>Navigate through the darkness, collect light fragments, and find your way to the exit.</p>
+            <p>Desktop: Use WASD or Arrow keys to move</p>
+            <p>Mobile: Use the on-screen joystick to move</p>
+            <button id="back-to-menu">Back to Menu</button>
+        </div>
+        
+        <div id="game-screen" class="hidden">
+            <div id="hud">
+                <div id="level-info">Level: <span id="level-number">1</span></div>
+                <div id="light-collected">Light: <span id="light-count">0</span>/<span id="light-total">0</span></div>
+            </div>
+            <div id="game-canvas-container">
+                <canvas id="game-canvas"></canvas>
+                <div id="mobile-controls" class="hidden">
+                    <div id="joystick-area">
+                        <div id="joystick-base">
+                            <div id="joystick-thumb"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="pause-button">Pause</button>
+        </div>
+        
+        <div id="pause-screen" class="hidden">
+            <h2>Game Paused</h2>
+            <button id="resume-game">Resume</button>
+            <button id="exit-to-menu">Exit to Menu</button>
+        </div>
+        
+        <div id="level-complete-screen" class="hidden">
+            <h2>Level Complete!</h2>
+            <p>Light Collected: <span id="level-complete-light">0</span>/<span id="level-complete-light-total">0</span></p>
+            <button id="next-level">Next Level</button>
+            <button id="level-complete-menu">Back to Menu</button>
+        </div>
+        
+        <div id="game-over-screen" class="hidden">
+            <h2>Game Over</h2>
+            <p>You've been consumed by darkness...</p>
+            <button id="retry-level">Retry Level</button>
+            <button id="game-over-menu">Back to Menu</button>
+        </div>
+    </div>
+    
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Game Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
